@@ -1,0 +1,39 @@
+body,
+article,
+nav,
+header,
+a {
+  text-align: center;
+}
+
+img {
+  margin: 0 auto;
+  margin-top: 20px;
+  display: block;
+  max-width: 50%;
+  border-radius: 15%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 2em;
+  padding: 5px;
+  border-style: solid;
+  border-radius: 15%;
+}
+
+a:hover {
+  color: green;
+}
+
+.link {
+  display: inline-block;
+  text-align: center;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.buyLink {
+  margin-top: 40px;
+}

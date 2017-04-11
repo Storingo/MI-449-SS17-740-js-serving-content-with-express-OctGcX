@@ -1,0 +1,5 @@
+<nav>
+  <% Object.keys(navs).forEach(function (id) { %>
+      <div class="link"><a href= <%= navs[id].path %>> <%= navs[id].name %> </a></div>
+  <% }) %>
+</nav>
