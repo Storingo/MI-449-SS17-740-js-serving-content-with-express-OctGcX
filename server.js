@@ -4,17 +4,11 @@ var port = process.env.PORT || 8080
 
 // Containers
 var pages = {}
-var navs = {}
 
 // Functions to fill containers
 function createPage (page) {
   var id = Object.keys(pages).length
   pages[id] = page
-}
-
-function createNavigation (navigation) {
-  var id = Object.keys(navs).length
-  navs[id] = navigation
 }
 
 // Create Game Specs
@@ -56,27 +50,6 @@ createPage({
   release: 'RELEASE: May 19th, 2017'
 })
 
-// Create Navs
-createNavigation({
-  path: '/',
-  name: 'HOME'
-})
-
-createNavigation({
-  path: '/page1',
-  name: 'PAGE1'
-})
-
-createNavigation({
-  path: '/page2',
-  name: 'PAGE2'
-})
-
-createNavigation({
-  path: '/page3',
-  name: 'PAGE3'
-})
-
 // Set ejs as view engine
 app.set('view engine', 'ejs')
 
@@ -87,7 +60,7 @@ Object.keys(pages).forEach(function (id) {
   app.get(pages[id].url, function (request, response) {
     response.render('pages/page.ejs', {
       page: pages[id],
-      navs: navs
+      navs: pages
     })
   })
 })
